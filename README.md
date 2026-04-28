@@ -54,7 +54,7 @@ No installation, no build tools, no terminal commands required.
 
 1. **Download or clone** this repository:
 ```bash
-   git clone https://github.com/your-username/address-book.git
+   git clone https://github.com/Halol12332/address_book_assm_datum.git
 ```
 2. **Open the project folder.**
 3. **Double-click `index.html`** to open it in your browser.
