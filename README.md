@@ -10,9 +10,6 @@ A lightweight, fully client-side Address Book application built with pure Vanill
 > <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/78ece13b-6ffa-4b45-8073-766b3f350f62" />
 
 
-> **Video Walkthrough**
-> *(Paste your video link here, e.g. a Loom or YouTube URL)*
-
 ---
 
 ## Features
@@ -92,7 +89,7 @@ These four functions in `app.js` form the data layer of the application:
 
 ## Author
 
-**Your Name**
+**Jaya Hakim Prajna**
 [GitHub](https://github.com/halol12332) · [LinkedIn](https://linkedin.com/in/jayahakimprajna)
 
 ---
