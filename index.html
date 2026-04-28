@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Address Book</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Playfair Display (display) + DM Mono (body/data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ===================== APP SHELL ===================== -->
+  <div class="app-shell">
+
+    <!-- ---- Header ---- -->
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="logo-block">
+          <span class="logo-icon">&#9654;</span>
+          <h1 class="logo-text">Address Book</h1>
+        </div>
+        <p class="header-sub">Your personal contact directory</p>
+      </div>
+    </header>
+
+    <!-- ---- Main Content ---- -->
+    <main class="app-main">
+
+      <!-- LEFT PANEL: Add Contact Form -->
+      <aside class="panel panel--form">
+        <h2 class="panel-title">Add Contact</h2>
+
+        <form id="contact-form" novalidate>
+
+          <!-- Name Field -->
+          <div class="field-group">
+            <label class="field-label" for="input-name">Full Name <span class="required">*</span></label>
+            <input
+              class="field-input"
+              type="text"
+              id="input-name"
+              placeholder="e.g. Jane Doe"
+              autocomplete="off"
+            />
+            <!-- Inline validation message -->
+            <span class="field-error" id="error-name"></span>
+          </div>
+
+          <!-- Phone Field -->
+          <div class="field-group">
+            <label class="field-label" for="input-phone">Phone Number <span class="required">*</span></label>
+            <input
+              class="field-input"
+              type="tel"
+              id="input-phone"
+              placeholder="e.g. +60 12-345 6789"
+              autocomplete="off"
+            />
+            <span class="field-error" id="error-phone"></span>
+          </div>
+
+          <!-- Email Field -->
+          <div class="field-group">
+            <label class="field-label" for="input-email">Email Address <span class="required">*</span></label>
+            <input
+              class="field-input"
+              type="email"
+              id="input-email"
+              placeholder="e.g. jane@example.com"
+              autocomplete="off"
+            />
+            <span class="field-error" id="error-email"></span>
+          </div>
+
+          <!-- Submit Button -->
+          <button class="btn btn--primary" type="submit">
+            <span>+ Add Contact</span>
+          </button>
+
+        </form>
+      </aside>
+
+      <!-- RIGHT PANEL: Contact List -->
+      <section class="panel panel--list">
+
+        <!-- Search Bar -->
+        <div class="search-wrapper">
+          <span class="search-icon">&#128269;</span>
+          <input
+            class="search-input"
+            type="text"
+            id="search-input"
+            placeholder="Search by name..."
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- Contact Count Badge -->
+        <div class="list-meta">
+          <span id="contact-count">0 contacts</span>
+        </div>
+
+        <!-- Contact List Container (dynamically populated by JS) -->
+        <div id="contact-list" class="contact-list">
+          <!-- Empty state shown when there are no contacts -->
+          <div class="empty-state" id="empty-state">
+            <p class="empty-icon">&#128100;</p>
+            <p class="empty-text">No contacts yet.<br/>Add one to get started.</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+  </div><!-- end .app-shell -->
+
+  <!-- Toast notification (for success/error feedback) -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Load our application logic -->
+  <script src="app.js"></script>
+
+</body>
+</html>
